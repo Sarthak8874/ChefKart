@@ -35,7 +35,7 @@
   opacity: 1;
   position: relative;
   z-index: 10;
-  top: 510px;
+  top: -50px;
   text-align: left;
   font: normal normal 600 12px/17px Open Sans;
   letter-spacing: 0.12px;
@@ -44,12 +44,12 @@
 }
 
 .food-type {
-  /* Layout Properties */
+ 
   top: 185px;
   left: 115px;
   width: 76px;
   height: 24px;
-  /* UI Properties */
+
   border: 0.5px solid #BDBDBD;
   border-radius: 17px;
   opacity: 1;
@@ -252,7 +252,7 @@
 .dishdetail .description {
   width: 182px;
   height: 39px;
-  /* UI Properties */
+
   text-align: left;
   font: normal normal normal 8px/14px Open Sans;
   letter-spacing: 0.16px;
@@ -263,7 +263,7 @@
 .dishdetail .time {
   width: 100px;
   height: 14px;
-  /* UI Properties */
+
   text-align: left;
   font: normal normal 600 10px/14px Open Sans;
   letter-spacing: 0px;

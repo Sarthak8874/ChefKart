@@ -42,15 +42,6 @@ function Home() {
     <>
       <header>
         <div className="h-12 bg-black"></div>
-        <div className="flex justify-center w-full">
-          <div className="item-selected flex justify-between px-9 items-center">
-            <div>
-              <img alt="loading" src={Selecteditemimg} className="w-4 h-4" />
-            </div>
-            <div className="pr-3"> 3 food items selected</div>
-            <div>{<BsArrowRight />}</div>
-          </div>
-        </div>
 
         <div className="flex justify-center w-full">
           <div className="flex flex-row dateandtime p-5">
@@ -216,6 +207,15 @@ function Home() {
           })}
         </div>
       </section>
+      <div className="flex justify-center w-full">
+        <div className="item-selected flex justify-between px-9 items-center">
+          <div>
+            <img alt="loading" src={Selecteditemimg} className="w-4 h-4" />
+          </div>
+          <div className="pr-3"> 3 food items selected</div>
+          <div>{<BsArrowRight />}</div>
+        </div>
+      </div>
     </>
   );
 }

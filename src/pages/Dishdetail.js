@@ -9,9 +9,13 @@ import { Link } from "react-router-dom";
 import { Idcontext } from "./Context";
 import axios from "axios";
 import { IoIosArrowBack } from "react-icons/io";
+
+
 function Dishdetail() {
+
   const { id, rating, description } = useContext(Idcontext);
   const [dishdetail, setdishdetail] = useState([]);
+
   useEffect(() => {
     axios
       .get(
@@ -21,7 +25,7 @@ function Dishdetail() {
         setdishdetail(res.data);
       });
   }, [id]);
-  console.log(dishdetail);
+
   return (
     <>
       <section className="dishdetail">
