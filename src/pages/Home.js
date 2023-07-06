@@ -9,6 +9,9 @@ import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { Idcontext } from "./Context";
+import Selecteditemimg from "../assets/selecteditems.svg";
+import { BsArrowRight } from "react-icons/bs";
+import { AiOutlinePlus } from "react-icons/ai";
 
 function Home() {
   const [populardishes, setPopulardishes] = useState([]);
@@ -40,13 +43,31 @@ function Home() {
       <header>
         <div className="h-12 bg-black"></div>
         <div className="flex justify-center w-full">
+          <div className="item-selected flex justify-between px-9 items-center">
+            <div>
+              <img alt="loading" src={Selecteditemimg} className="w-4 h-4" />
+            </div>
+            <div className="pr-3"> 3 food items selected</div>
+            <div>{<BsArrowRight />}</div>
+          </div>
+        </div>
+
+        <div className="flex justify-center w-full">
           <div className="flex flex-row dateandtime p-5">
             <div className="date flex flex-row justify-start items-center w-[50%] font-bold border-r-2">
-              <img src={calenderimg} className="h-4 w-4 mr-2 text-xs" />{" "}
+              <img
+                alt="loading"
+                src={calenderimg}
+                className="h-4 w-4 mr-2 text-xs"
+              />{" "}
               <div className="w-full">{formattedDate}</div>
             </div>
             <div className="date flex flex-row justify-start items-center w-[50%] font-bold pl-3">
-              <img src={clockimg} className="h-4 w-4 mr-2 text-xs" />{" "}
+              <img
+                alt="loading"
+                src={clockimg}
+                className="h-4 w-4 mr-2 text-xs"
+              />{" "}
               <div>10:30Pm-12:30Pm</div>
             </div>
           </div>
@@ -110,7 +131,11 @@ function Home() {
               Recommended{" "}
               <div className="flex justify-center items-center ml-2">
                 {" "}
-                <img className="h-[10px] w-[14px]" src={RecommendedLogo} />
+                <img
+                  alt="loading"
+                  className="h-[10px] w-[14px]"
+                  src={RecommendedLogo}
+                />
               </div>
             </div>
             <button className="flex justify-center items-center menu-btn text-white">
@@ -124,13 +149,21 @@ function Home() {
                   <div className="item-details w-[156px] h-[73px] ml-[2px]">
                     <div className="heading flex items-center w-full mb-1">
                       <div className="w-[88px]">{dish.name}</div>
-                      
+
                       <div className="flex items-center ml-2">
-                        <img src={MaskGroup} className="w-[8px] h-[8px]" />
+                        <img
+                          alt="loading"
+                          src={MaskGroup}
+                          className="w-[8px] h-[8px]"
+                        />
                       </div>
                       <div className="rating flex justify-center items-center ml-2">
                         {dish.rating}
-                        <img className="h-1 w-1 m-[1px]" src={startLogo} />
+                        <img
+                          alt="loading"
+                          className="h-1 w-1 m-[1px]"
+                          src={startLogo}
+                        />
                       </div>
                     </div>
                     <div className="flex additional-details">
@@ -140,6 +173,7 @@ function Home() {
                             <>
                               <div className="flex flex-col w-full h-full justify-center items-center">
                                 <img
+                                  alt="loading"
                                   src={Refrigerator}
                                   className="h-[12px] w-[7px]"
                                 />
@@ -167,11 +201,13 @@ function Home() {
                     <div className="description mt-1">{dish.description}</div>
                   </div>
                   <div className="w-[92px] h-[68px] relative">
-                    <img src={foodimg} />
+                    <img alt="loading" src={foodimg} />
                     <button className="add flex items-center justify-center absolute bottom-[-10px] left-3">
                       {" "}
                       Add
-                      <div className="absolute right-1 top-0 plus">+</div>
+                      <div className="absolute right-1 top-0 plus">
+                        {<AiOutlinePlus />}
+                      </div>
                     </button>
                   </div>
                 </div>

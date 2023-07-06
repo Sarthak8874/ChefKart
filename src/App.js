@@ -15,7 +15,7 @@ function App() {
               </>
             }
           />
-            <Route
+          <Route
             path="/detail"
             element={
               <>
@@ -23,7 +23,6 @@ function App() {
               </>
             }
           />
-        
         </Routes>
       </BrowserRouter>
     </>

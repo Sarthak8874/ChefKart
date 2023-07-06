@@ -26,6 +26,23 @@
   opacity: 1;
 }
 
+.item-selected {
+  width: 239px;
+  height: 40px;
+  background: #1C1C1C 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 9px #00000017;
+  border-radius: 7px;
+  opacity: 1;
+  position: relative;
+  z-index: 10;
+  top: 510px;
+  text-align: left;
+  font: normal normal 600 12px/17px Open Sans;
+  letter-spacing: 0.12px;
+  color: #FFFFFF;
+  opacity: 1;
+}
+
 .food-type {
   /* Layout Properties */
   top: 185px;
@@ -129,6 +146,13 @@
   font: normal normal bold 10px/11px Open Sans;
   letter-spacing: 0px;
   color: #FFFFFF;
+  opacity: 1;
+}
+
+.back-btn {
+  width: 5px;
+  height: 11px;
+  transform: matrix(0, 1, -1, 0, 0, 0);
   opacity: 1;
 }
 
