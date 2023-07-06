@@ -93,8 +93,7 @@ function Dishdetail() {
                     <div className="flex w-full justify-between list px-2 my-[1px]">
                       <div>{name}</div>
                       <div>
-                        ({quantity.endsWith("Kg")})? `${quantity}` : `$
-                        {quantity} Pc`
+                      {quantity.endsWith('Kg') ? `${quantity}` : `${quantity} Pc`}
                       </div>
                     </div>
                   </>
